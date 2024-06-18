@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Gymownia | Koszyk</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">
+            <span>Koszyk</span>
+        </h1>
+        <div class="auth-buttons">
+            <button class="auth-btn" onclick="window.location.href='index.html'">Strona Główna</button>
+         
+            <button class="auth-btn" onclick="window.location.href='contact.html'">Kontakt</button>
+        </div>
+        <div class="auth-user" id="auth-user" style="display: none;">
+            <span id="username"></span>
+            <button class="auth-btn" onclick="logout()">Wyloguj</button>
+        </div>
+    </header>
+    <main class="container">
+        <section class="cart-section">
+            <h1 class="cart-title">Twój koszyk</h1>
+            <div id="cartItems">
+                <p class="basket-total">Razem: <span id="basketTotal">0 zł</span></p>
+            </div>
+            <button class="auth-btn" onclick="checkout()">Zamów</button>
+        </section>
+    </main>
+    <div class="footer-bg">
+        <p class="footer-text">Polecamy się na przyszłość!</p>
+    </div>
+    <form id="orderForm" action="order.php" method="post" style="display: none;">
+        <input type="hidden" name="orderData" id="orderData" />
+    </form>
+    <script src="js/main.js"></script>
+</body>
+</html>
